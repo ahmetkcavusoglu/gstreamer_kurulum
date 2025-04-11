@@ -1,0 +1,55 @@
+# GStreamer Nedir?
+
+GStreamer, çoklu ortam uygulamaları oluşturmak için kullanılan güçlü bir açık kaynak multimedya çerçevesidir.
+
+# Ne İçin Kullanılır?
+
+GStreamer, ses ve video oynatma, kodlama, kod çözme, düzenleme ve yayın akışı gibi çeşitli multimedya işlemleri için kullanılır.
+
+# GStreamer Kurulumu
+
+GStreamer'ı şu adresten indirebilirsiniz: https://gstreamer.freedesktop.org/download/#windows 
+
+MSVC 64-bit (VS 2019, Release CRT) sürümünü tercih edin:
+- 1.26.0 runtime installer
+- 1.26.0 development installer
+
+![Installer](https://i.hizliresim.com/2la3zyg.png)
+
+Her iki installer'ı da indirip kurun. En güncel sürümü de indirebilirsiniz.
+
+# Ortam Değişkenlerinin Ayarlanması
+
+Kurulum tamamlandıktan sonra bilgisayarınızdan ortam değişkenlerine gidin:
+
+1. Kullanıcı değişkenleri ve sistem değişkenleri kısmında ayrı ayrı Path'e tıklayın
+2. GStreamer'ın kurulu olduğu dizinin içerisinde yer alan MSVC'nin aşağıdaki klasörlerini ekleyin:
+   - bin
+   - lib
+   - lib\pkconfig
+   - lib\gstreamer-1.0
+Kullanıcı değişkenleri aşağıdaki gibi olmalıdır;
+![Installer](https://i.hizliresim.com/culxk0x.png)
+Ortam değişkenleri aşağıdaki gibi olmalıdır;
+![Installer](https://i.hizliresim.com/rg48iy9.png)
+
+# Kurulumun Doğrulanması
+
+Daha sonra bilgisayardan terminal açın. Terminalde aşağıdaki komutu çalıştırın:
+
+gst-launch-1.0.exe --version
+
+![Installer](https://i.hizliresim.com/1fjb78y.png)
+Uygun bir cevap gelirse kurulum başarılı demektir.
+
+# Örnek Kullanım
+
+Örnek olarak aşağıdaki komutu çalıştırabilirsiniz:
+
+gst-launch-1.0 rtspsrc location="rtsp://admin:1234@192.168.1.200:554/cam/realmonitor?channel=1&subtype=0" ! rtph264depay ! avdec_h264 ! autovideosink
+
+Yukarıdaki komut çalışmazsa, sonuna `.exe` ekleyerek deneyebilirsiniz:
+
+gst-launch-1.0.exe rtspsrc location="rtsp://admin:1234@192.168.1.200:554/cam/realmonitor?channel=1&subtype=0" ! rtph264depay ! avdec_h264 ! autovideosink
+
+![Installer](https://i.hizliresim.com/a4d7vd9.png)
