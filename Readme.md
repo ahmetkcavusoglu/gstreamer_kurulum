@@ -29,8 +29,11 @@ Kurulum tamamlandıktan sonra bilgisayarınızdan ortam değişkenlerine gidin:
    - lib\pkconfig
    - lib\gstreamer-1.0
 Kullanıcı değişkenleri aşağıdaki gibi olmalıdır;
+
 ![Installer](https://github.com/user-attachments/assets/ab4573d1-6267-4216-a6ab-1b7e2dd72b70)
+
 Ortam değişkenleri aşağıdaki gibi olmalıdır;
+
 ![Installer](https://github.com/user-attachments/assets/f96bc358-4e67-488e-ba52-94a3186e890b)
 
 # Kurulumun Doğrulanması
