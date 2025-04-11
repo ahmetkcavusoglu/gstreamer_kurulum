@@ -14,7 +14,7 @@ MSVC 64-bit (VS 2019, Release CRT) sürümünü tercih edin:
 - 1.26.0 runtime installer
 - 1.26.0 development installer
 
-![Installer](https://i.hizliresim.com/2la3zyg.png)
+![Installer](https://raw.githubusercontent.com/ahmetkcavusoglu/gstreamer_kurulum/refs/heads/master/images/001_installer_download.png)
 
 Her iki installer'ı da indirip kurun. En güncel sürümü de indirebilirsiniz.
 
@@ -29,9 +29,9 @@ Kurulum tamamlandıktan sonra bilgisayarınızdan ortam değişkenlerine gidin:
    - lib\pkconfig
    - lib\gstreamer-1.0
 Kullanıcı değişkenleri aşağıdaki gibi olmalıdır;
-![Installer](https://i.hizliresim.com/culxk0x.png)
+![Installer](https://github.com/user-attachments/assets/ab4573d1-6267-4216-a6ab-1b7e2dd72b70)
 Ortam değişkenleri aşağıdaki gibi olmalıdır;
-![Installer](https://i.hizliresim.com/rg48iy9.png)
+![Installer](https://github.com/user-attachments/assets/f96bc358-4e67-488e-ba52-94a3186e890b)
 
 # Kurulumun Doğrulanması
 
@@ -39,7 +39,7 @@ Daha sonra bilgisayardan terminal açın. Terminalde aşağıdaki komutu çalı�
 
 gst-launch-1.0.exe --version
 
-![Installer](https://i.hizliresim.com/1fjb78y.png)
+![Installer](https://github.com/ahmetkcavusoglu/gstreamer_kurulum/blob/master/images/004_komut_satiri_gstreamer_version.png?raw=true)
 Uygun bir cevap gelirse kurulum başarılı demektir.
 
 # Örnek Kullanım
@@ -52,4 +52,4 @@ Yukarıdaki komut çalışmazsa, sonuna `.exe` ekleyerek deneyebilirsiniz:
 
 gst-launch-1.0.exe rtspsrc location="rtsp://admin:1234@192.168.1.200:554/cam/realmonitor?channel=1&subtype=0" ! rtph264depay ! avdec_h264 ! autovideosink
 
-![Installer](https://i.hizliresim.com/a4d7vd9.png)
+![Installer](https://github.com/ahmetkcavusoglu/gstreamer_kurulum/blob/master/images/005_gstreamer_sample_using.png?raw=true)
